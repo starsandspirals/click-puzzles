@@ -1,0 +1,257 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+#wrapper {
+	width: 100%;
+	background-color: rgb(235,245,255);
+	margin: 0 auto;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	line-height: 1.5em;
+	text-align: justify;
+}
+
+/* Generic formatting styles */
+h1 {
+	font-size: 1.5em;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+p {
+	margin-bottom: 0.5em;
+}
+
+div, article, section {
+	float: left;
+}
+
+
+/* Header styles */
+header {
+	margin: 0;
+	padding: 0 5%;
+	background-color: rgb(75,0,130);
+	text-align: left;
+}
+
+header img {
+	display: inline;
+	float: right;
+	margin-top: 1em;
+	width: 2em;
+	background-color: rgb(75,0,130);
+}
+
+header h1 {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	color: #eeeeee;
+	font-size: 2em;
+	line-height: 2em;
+	text-shadow: 3px 3px #000000;
+}
+
+/* Navigation bar styles */
+nav {
+	margin: 0;
+	padding: 5px 5%;
+	background-color: rgb(41,5,53);
+	font-size: 1.1em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	display: inline;
+	padding-right: 5%;
+}
+
+nav a {
+	text-decoration: none;
+	outline: none;
+}
+
+nav a:link { color: rgb(10,206,124); }
+
+nav a:visited { color: rgb(10,206,124); }
+
+nav a:hover { color: rgb(143,103,14); }
+
+/* Navigation styles (mobile-first): hides all menu items aside from home unless the menu toggle has
+	been activated, in which case they are shown as a drop-down menu */
+nav li:not(:first-child) {
+	display: none;
+}
+
+nav.toggle {position: relative;}
+
+nav.toggle li {
+		float: none;
+		display: inline;
+}
+
+nav.toggle li a {
+		display: flex;
+		flex-direction: column;
+}
+
+nav li.icon {
+	display: inline;
+	float: right;
+} 
+
+/* Main content style */
+main {
+	padding: 0.5em 5% 0.5em 5%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Footer style */
+footer {
+	clear: both;
+	font-size: 0.75em;
+	text-align: center;
+	border-top: 1px solid gray;
+	padding: 3px 5%;
+	background-color: rgb(10,206,124);
+}
+
+/* General image styles */
+img {
+	width: 100%;
+	background-color: rgb(235,245,255);
+}
+
+figure {
+	float: left;
+	border: solid 1px gray;
+	margin: 10px 5% 10px 0;
+	padding: 0;
+	background-color: white;
+	box-shadow: 7px 7px 5px rgb(100,100,100);
+	transition: transform 0.7s ease;
+	width: 5em;
+}
+
+figure:hover {
+	transform: scale(1.1, 1.1);
+}
+
+figcaption {
+	text-align: center;
+}
+
+/* Styles for block quotes (only appear on News page) */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid rgb(75, 0, 130);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote:before {
+  color: rgb(75, 0, 130);
+  content: "\"";
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/* Styles for canvas elements (only appear on Match the Pairs page) */
+canvas { 
+  border: 10px solid gray;
+}
+
+#matchpairs {
+	padding: 1em 5% 1em 5%;
+}
+
+/* Styles for form elements (only appear on Contact page) */
+label {
+	float: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+    background-color: rgb(248,248,248);
+    resize: none;
+}
+
+/* Media queries */
+@media (min-width: 500px) {
+
+	/* As the screen gets larger, transition to a rounded, centred design, making better use
+		of the extra space */
+	#wrapper { width: 80%; margin: 0 5em; }
+
+	body {
+		margin: 0 auto;
+		padding: 4em 1em;
+	}
+
+	header {
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+
+	/* Increase the size of the header for better visibility */
+	header img {
+		width: 4em;
+	}
+
+	header h1 {
+		font-size: 2.5em;
+		line-height: 2.5em;
+	}
+
+	figure {
+		width: 30%;
+	}
+
+	/* Switch menu styles to a simple horizontal list and remove the menu icon */
+	nav li:not(:first-child) {
+		display: inline;
+	}
+
+	nav li.icon {display: none;}
+
+}
+
+@media (min-width: 900px) {
+
+	/* On even larger screens, position the content and aside divisions side-by-side, to fill up the
+		larger space */
+	main {
+		flex-direction: row;
+	}
+
+	#content {
+		width: 60%;
+	}
+
+	main aside {
+		width: 35%;
+		padding-left: 5%;
+	}
+
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	<meta name="author" content="Daniel Marshall">
+	<title>Click Puzzles</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/clickpuzzles.css">
+	<!-- All content on this website is my own work, except as specified on the References page -->
+</head>
+
+<body>
+
+	<div id="wrapper">
+	<!-- This wrapper contains all of the website content, and is used for responsive styling -->
+
+		<header>
+			<h1>Click Puzzles</h1>
+			<img src="./img/logo.svg" alt="" />
+		</header>
+
+		<nav id="nav">
+			<ul class="nav">
+				<li><a href="index.html" accesskey="1">Home</a></li>
+				<li><a href="founders.html" accesskey="2">Founders</a></li>
+				<li><a href="news.html" accesskey="3">News</a></li>
+				<li><a href="recommendations.html" accesskey="4">Recommendations</a></li>
+				<li><a href="puzzles.html" accesskey="5">Puzzles</a></li>
+				<li><a href="contact.html" accesskey="9">Contact</a></li>
+				<li id="menu" class="icon"> <a href="javascript:void(0);">
+					&#9776;</a></li>
+				<!-- This hamburger icon only appears on the mobile design, and opens the drop-down menu -->
+			</ul>
+		</nav>
+
+		<main>
+
+			<div id="content">
+				<h1>Contact Us</h1>
+				<form name="contact" action="http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+
+					<input type="hidden" name="recipient" value="dmarshall2@sheffield.ac.uk">
+
+					<input type="hidden" name="subject" value="Contact Form">
+					<!-- These two hidden fields allow the contact form to function, allowing me to recieve emails
+						when the form is submitted -->
+
+					<p>
+						<label for="from">Your name: </label> 
+						<input type="text" name="from" id="from" maxlength="40" size="20" 
+							placeholder="Enter name here" required>
+					</p>
+
+					<p>
+						<label for="email">Your email address: </label>
+						<input type="email" name="email" id="email" placeholder="Enter email here"
+							required>
+					</p>
+
+					<p>
+						<label for="message">Your message: </label>
+						<textarea cols="40" rows="5" name="message" id="message" placeholder="Enter message here"
+							required></textarea>
+					</p>
+
+    				<p>
+      					<input type="submit" name="submit" id="submit" value="Submit">
+      					<input type="reset">
+    				</p>					
+			</div>
+
+			<aside>
+
+				<h1>Our Contact Details</h1>
+
+				<p>Address: <br>
+				1 Puzzle Road <br>
+				Sheffield <br>
+				United Kingdom <br>
+				S1 1AB </p>
+
+				<p> Or email our founder at <a href="mailto:dmarshall2@sheffield.ac.uk">dmarshall2@sheffield.ac.uk</a>! </p>
+
+			</aside>
+			<!-- On mobile devices the content is above the aside section, whereas on larger screens these appear alongside each other -->
+
+		</main>
+
+		<footer>
+			<p>&copy; Daniel Marshall, 2016</p>
+			<p>All information on this website is entirely fictional, and was created by Daniel Marshall for a COM1008 assignment at the University of Sheffield.</p>
+			<a href="accessibility.html" accesskey="k">Accessibility</a>
+			<a href="references.html">References</a>
+		</footer>
+
+		<script src="js/toggle.js"> </script>
+		<!-- This script is for the hamburger menu drop-down functionality - it opens and closes the menu -->
+	</div>
+
+</body>
+
+</html>
+		
+
